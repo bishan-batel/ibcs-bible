@@ -1,6 +1,15 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Systems}{5}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Range of Usability Problems with commonly used digital devices}{5}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Usability}{5}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Digital Devices}{5}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.1}Properties of Systems}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Reasons for a new system}{5}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Change Management}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Stages of Change Management}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Considerations in Change Management}{6}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}System Life Cycle}{6}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Stakeholders}{7}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Role of End Users}{7}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Methods of Obtaining Requirements from Stakeholders}{8}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Range of Usability Problems with commonly used digital devices}{8}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Usability}{8}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Digital Devices}{8}{subsection.1.4.2}%
 \contentsfinish 
