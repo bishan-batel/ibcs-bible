@@ -31,6 +31,7 @@
 \usepackage{caption}
 \usepackage{booktabs}
 
+
 % Bibliography
 \usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
 \addbibresource{bibliography.bib} % BibTeX bibliography file
@@ -57,14 +58,10 @@
   arrow style=<-,
 }
 
-%----------------------------------------------------------------------------------------
-%	TIKZ STYLE
-%----------------------------------------------------------------------------------------
-\usetikzlibrary{shapes.geometric, arrows}
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, text width=1.5cm, draw=black, fill=green!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 %----------------------------------------------------------------------------------------
@@ -382,30 +379,26 @@ Installation ofa new system by turning off the old system when the new one is tu
 
 \begin{example}[System Flow Chart]
   A simple system flor chart describing the process of a student applying for a
-  course at a university.\\
+  course at a university.
   
+  \linebreak
+
   % flow chart  with tikz describing the process of a student 
   % applying for a course at a university
-  \begin{center}
-  \begin{tikzpicture}[node distance=2cm,auto]
+  \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm]
     \node (start) [startstop] {Start};
-    \node (eligible) [decision, below of=start, yshift=-2cm] {Student wants course};
-    \node (apply) [process, right of=eligible, xshift=3cm] {Apply for course};
-    \node (figure it out) [process, below of=eligible, yshift=-2cm] {Figure it out.};
-    \node (end) [startstop, below of=apply, yshift=-5cm, xshift=-3cm] {End};
-
-    \draw [arrow] (start) -- (eligible);
-    \draw [arrow] (eligible) -- node[anchor=north] {yes} (apply);
-    \draw [arrow] (eligible) -- node[anchor=west] {no} (figure it out);
-    \draw [arrow] (apply) -- (end);
-    \draw [arrow] (figure it out) -- (end);
+    \node (eligible) [decision] [below of=start] {Check if student is eligible};
+    \node (apply) [process] [below of=eligible] {Apply for course};
+    \node (accept) [process] [below of=apply] {Acceptance of application};
+    \node (end) [startstop] [below of=accept] {End};
+    \path (start) edge node {} (eligible)
+          (eligible) edge node {} (apply)
+          (apply) edge node {} (accept)
+          (accept) edge node {} (end);
   \end{tikzpicture}
-  \end{center}
 \end{example}
 
 \begin{example}[Data Flow Diagram]
-% TODO
-  TODO
 \end{example}
 
 \section{Data Migration}
