@@ -28,6 +28,7 @@
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \usepackage{amsthm}
 
+
 % Bibliography
 \usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
 \addbibresource{bibliography.bib} % BibTeX bibliography file
@@ -43,6 +44,20 @@
 \newcommand{\cvx}{convex}
 \begin{document}
 
+\smartdiagramset{
+  text width=2.5cm,
+  circular distance=5.7cm,
+  % set color 
+  border color=none,
+  %uniform color list=teal!70 for 6 items,
+  uniform color=orange!60, 
+    green!50!lime!60,
+    magenta!60,
+    blue!50!cyan
+   for 6 items,
+  uniform connection color=true
+}
+
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -53,7 +68,7 @@
 \centering
 \vspace*{5cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-\textbf{Computer Science Bible}\\
+\textbf{Sinah Bible}\\
 {\LARGE IB.CS-HL 1 \& 2}\par % Book title
 \vspace*{1cm}
 {\Huge Nerds, et al}\par % Author name
@@ -150,10 +165,6 @@
 \end{definition}\par
 
 \begin{center}
-  \smartdiagramset{
-    text width=2.5cm,
-    circular distance=5.7cm,
-  }
   \smartdiagram[circular diagram:clockwise]{
     Definition,
     Analysis,
@@ -244,8 +255,122 @@ buttons,
 \begin{definition}[Accessibility]
 \end{definition}\par
 
+\section{Forms of Testing}
+\begin{definition}[Black Box Testing]
+  Testing a system without knowing how it works.
+\end{definition}\par
+\begin{definition}[White Box Testing]
+  Testing a system by knowing how it works.
+\end{definition}\par
+\begin{definition}[Beta Testing]
+  Testing a system by a group of people who are not involved in the development 
+  of the system.
+\end{definition}\par
+\begin{definition}[Alpha Testing]
+  Small testing done by the developers after the development 
+  of the product.
+\end{definition}\par
 
-%	Digital Devices -----------------------------------------------------------------------------
-\subsection{Digital Devices}
+% User Acceptance Testing
+\begin{definition}[User Acceptance Testing]
+  Testing a system through the end users, feedback given in 
+  yes or no responses.
+\end{definition}\par
 
+\section{System Installations}
+
+\subsection{Parallell Installation}
+Installing a system in a way that the old system is still running while the new
+system is being installed.
+% pros and cons table
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    Pros & Cons \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Direct Installation}
+Directly switching from one system and to the next.
+
+\section{Data Migration}
+\subsection{Problems with Data Migration}
+\begin{itemize}
+  \item Diferences in data structure 
+  \item Incompattible file structure
+  \item tree
+\end{itemize}
+
+\section{Forms of Staff Training}
+\begin{definition}[Formal Classrooms}
+  Training in a classroom setting.
+  \begin{itemize}
+    \item Cheaper and more efficient
+    \item Instructors can not give individual attention
+  \end{itemize}
+\end{definition}\par
+
+\begin{definition}[Remote/Online Training]
+\end{definition}
+
+\section{Data Loss}
+\begin{definition}[Data Loss]
+  The loss of data.
+\end{definition}\par
+
+\subsection{Ranges of data loss}
+\begin{itemize}
+  \item Power out during storm 
+  \item Defective hard drive
+  \item System crash
+  \item Malicious activities by employees, outsiders, or malicious user
+  \item Virus or Keylogger
+\end{itemize}
+
+\subsection{Consequences}
+\begin{itemize}
+  \item Loss of money
+  \item Loss of time
+  \item Loss of reputation
+  \item Loss of customers
+\end{itemize}
+\end{definition}
+
+\subsection{Prevention}
+\begin{itemize}
+  \item \textbf{Failover Systems --}
+  \item \textbf{Removable Media --} 
+  \item \textbf{Offsite/Onsite storage --} Cloud Storage or Hard Drive
+  \item \textbf{Redudency --} Any type of storage device that can be removed and inserted with ease
+\end{itemize}
+
+\section{Strategies for manging releases and update}
+\begin{definition}[Release]
+  A version of a system that is released to the public.
+\end{definition}\par
+\begin{definition}[Update]
+  A change to a system that is released to the public.
+\end{definition}\par
+
+\subsection{Strategies}
+\begin{itemize}
+  \item \textbf{Manual Updates --} Updates are done manually by the user
+  \item \textbf{Automatic Updates --} Updates are done automatically by the system
+\end{itemize}
+
+% Pros and cons between manual and automatic updates in a table 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    Pros & Cons \\
+    \hline
+    User can decide when to update & User can forget to update \\
+    \hline
+    User can choose what to update & User can update at the wrong time \\
+    \hline
+  \end{tabular}
+\end{table}
 \end{document}
